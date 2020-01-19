@@ -87,6 +87,15 @@ $battleResult = $battleManager->battle($ship1, $ship1Quantity, $ship2, $ship2Qua
                     <?php endif; ?>
                 </p>
             </div>
+            
+            <h3>Ship Health</h3>
+            <dl class="dl-horizontal">
+                <dt><?php echo $ship1->getName(); ?></dt>
+                <dd><?php echo $ship1->getStrength(); ?></dd>
+                <dt><?php echo $ship2->getName(); ?></dt>
+                <dd><?php echo $ship2->getStrength(); ?></dd>
+            </dl>
+
             <a href="index.php"><p class="text-center"><i class="fa fa-undo"></i> Battle again</p></a>
         
             <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
