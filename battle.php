@@ -1,7 +1,11 @@
 <?php
 require __DIR__.'/bootstrap.php';
 
-$shipsLoader = new ShipLoader();
+
+$container = new Container($configuration);
+$pdo = $container->getPDO();
+
+$shipsLoader = new ShipLoader($pdo);
 $ships = $shipsLoader->getShips();
 
 $ship1Id = isset($_POST['ship1_id']) ? $_POST['ship1_id'] : null;
